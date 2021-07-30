@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="fr"> <!--<![endif]-->
+
+<!-- Mirrored from www.vasterad.com/themes/workscout/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2017 06:31:38 GMT -->
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<title>État de Droit SARL</title>
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="../assets2/css1/style.css">
+<link rel="stylesheet" href="../assets2/css1/colors/green.css" id="colors">
+<link rel="stylesheet" href="../assets2/bootstrap/css/bootstrap.css" id="colors">
+
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="wrapper">
+
+
+<!-- Header
+================================================== -->
+<header class="transparent sticky-header full-width">
+<div class="container">
+	<div class="sixteen columns">
+	
+		<!-- Logo -->
+		<div id="logo" style="margin-top:15px">
+			<h1><a href="index.php"><font style="font-size:25px; color:white">État de Droit SARL</font></a></h1>
+		</div>
+
+		<!-- Menu -->
+		<nav id="navigation" class="menu">
+			<ul id="responsive">
+
+				<li><a href="login" id="current">Poster offres d'emploi</a>
+					
+				</li>
+			</ul>
+
+
+			<ul class="float-right">
+
+				<li><a href="home"><i class="fa fa-home"></i> Accueil</a></li>
+				<li><a href="offres"><i class="fa fa-gift"></i> Offres</a></li>
+                <li><a href="index.php"><i class="fa fa-user" ></i> Postuler</a></li>
+				<li><a href="blog"><i class="fa fa-"></i> publier</a></li>
+				<li><a href="login"><i class="fa fa-lock"></i> Connexion Admin</a></li>
+				
+				
+			</ul>
+
+		</nav>
+
+		<!-- Navigation -->
+		<div id="mobile-navigation">
+			<a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i> Menu</a>
+		</div>
+
+	</div>
+</div>
+</header>
+<div class="clearfix"></div>
+
+
+<!-- Banner
+================================================== -->
+<div id="banner" class="with-transparent-header parallax background" style="background-image: url(../assets2/images/banner-home-02.jpg)" data-img-width="2000" data-img-height="1330" data-diff="300">
+	<div class="container">
+		<div class="sixteen columns">
+			
+			<div class="search-container">
+
+				
+				
+				<!-- Announce -->
+				<div class="announce">
+					Nous avons plus<strong>15 000</strong> offres de poste pour vous! 
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+
+
+<!-- Modal for login -->
+<div class = "modal fade" id = "myModal" tabindex = "-1" role = "dialog" 
+   aria-labelledby = "myModalLabel" aria-hidden = "true">
+   
+   <div class = "modal-dialog">
+      <div class = "modal-content">
+         
+         <div class = "modal-header">
+            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
+                  &times;
+            </button>
+            
+            <h4 class = "modal-title" id = "myModalLabel">
+               Fill Detail here
+            </h4>
+         </div>
+         <form class="form-signin" method="post" id="login-form">
+         
+         <div class = "modal-body">
+            <input type="email" name="txt_uname_email" placeholder="Enter Your email here" />
+         </div>
+         <div class = "modal-body">
+            <input type="password" name="txt_password" placeholder="Enter Your password" />
+         </div>
+         
+         <div class = "modal-footer">
+            
+            <input type = "submit" class = "btn btn-primary" name="btn-login" value="LOG IN">
+               
+            </input>
+			<button type = "button" class = "btn btn-default" data-dismiss = "modal">
+               Close
+            </button>
+            
+        </form>
+         </div>
+         
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+  
+</div><!-- /.modal -->
+
+<!-- Modal for login -->
+<div class = "modal fade" id = "signupModal" tabindex = "-1" role = "dialog" 
+   aria-labelledby = "myModalLabel" aria-hidden = "true">
+   
+   <div class = "modal-dialog">
+      <div class = "modal-content">
+         
+         <div class = "modal-header">
+            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
+                  &times;
+            </button>
+            
+            <h4 class = "modal-title" id = "myModalLabel">
+               Fill Detail here
+            </h4>
+            <form method="post" class="form-signin" enctype="multipart/form-data">
+         </div>
+         <div class = "modal-body">
+            Name: <input type="text" name="txt_uname" placeholder="Enter Your name" required/>
+         </div>
+         
+         <div class = "modal-body">
+            Email : <input type="email" name="txt_umail" placeholder="Enter Your email here" required/>
+         </div>
+         <div class = "modal-body">
+            Password: <input type="password" name="txt_upass" placeholder="Enter Your password" required/>
+         </div>
+         <div class = "modal-body">
+            Slect Your Photo: <input type="file" name="img" required/>
+         </div>
+         
+         <div class = "modal-footer">
+            
+            <input type = "submit" class = "btn btn-primary" value="SIGN UP" name="btn-signup">
+			 <button type = "button" class = "btn btn-default" data-dismiss = "modal">
+               Close
+            </button>
+           
+		   
+            </input>
+         </div>
+         </form>
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+  
+</div><!-- /.modal -->
+
+<!-- Content
+================================================== -->
+<div class="container">
+	<!-- Recent Jobs -->
+	<h1 class="text-center">Offres d'emploi recement publiée</h1>
+	<div class="eleven columns">
+	<div class="padding-right">
+		
+		
+
+		<ul class="job-list full">
+			
+			
+		</ul>
+		<div class="clearfix"></div>
+
+		<div class="pagination-container">
+			
+			
+		</div>
+
+	</div>
+	</div>
+
+
+	<!-- Widgets -->
+	<div class="five columns">
+          
+		<!-- Sort by -->
+		<div class="widget">
+            
+			<img src="../assets2/images/post_a_job.jpg" height="100px" width="100px"/>
+
+
+		</div>
+
+		<!-- Location -->
+		<div class="widget">
+			
+			
+		</div>
+
+		<!-- Job Type -->
+		<div class="widget">
+			<h2>Trouver des emplois et publier des offres d'emploi</h2>
+
+			<ul class="checkboxes">
+				<li>
+					<img src="../assets2/images/fb-jobs.png" height="100px" width="100px"/>
+					
+				</li>
+				
+			</ul>
+
+		</div>
+
+		
+
+
+	</div>
+	<!-- Widgets / End -->
+
+
+</div>
+
+
+
+
+
+
+<!-- Footer
+================================================== -->
+<div class="margin-top-15"></div>
+
+<div id="footer">
+	
+
+	<!-- Bottom -->
+	<div class="container">
+		<div class="footer-bottom">
+			<div class="sixteen columns">
+				<h4>Suivez-nous</h4>
+				<ul class="social-icons">
+					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+					<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
+					<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
+					<li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>
+				</ul>
+				<div class="copyrights">©  Copyright 2021 by <a href="#">Project G2 AIA</a>. All Rights Reserved.</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Back To Top Button -->
+<div id="backtotop"><a href="#"></a></div>
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Scripts
+================================================== -->
+<script src="../assets2/scripts/jquery-2.1.3.min.js"></script>
+<script src="../assets2/scripts/custom.js"></script>
+<script src="../assets2/scripts/jquery.superfish.js"></script>
+<script src="../assets2/scripts/jquery.themepunch.tools.min.js"></script>
+<script src="../assets2/scripts/jquery.themepunch.revolution.min.js"></script>
+<script src="../assets2/scripts/jquery.themepunch.showbizpro.min.js"></script>
+<script src="../assets2/scripts/jquery.flexslider-min.js"></script>
+<script src="../assets2/scripts/chosen.jquery.min.js"></script>
+<script src="../assets2/scripts/jquery.magnific-popup.min.js"></script>
+<script src="../assets2/scripts/waypoints.min.js"></script>
+<script src="../assets2/scripts/jquery.counterup.min.js"></script>
+<script src="../assets2/scripts/jquery.jpanelmenu.js"></script>
+<script src="../assets2/scripts/stacktable.js"></script>
+<script src="../assets2/scripts/headroom.min.js"></script>
+<script src="../assets2/bootstrap/jquery-3.2.1.min.js"></script>
+<script src="../assets2/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+		
+		
+			
+		
+	
+		
+		
+	
+	
+		
+</div>
+
+
+</body>
+
+<!-- Mirrored from www.vasterad.com/themes/workscout/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2017 06:32:06 GMT -->
+</html>

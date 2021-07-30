@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidat{% endblock %}
+
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ candidat.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ candidat.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Postnom</th>
+                        <td>{{ candidat.postnom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Prenom</th>
+                        <td>{{ candidat.prenom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Sexe</th>
+                        <td>{{ candidat.sexe }}</td>
+                    </tr>
+                    <tr>
+                        <th>Etat_civil</th>
+                        <td>{{ candidat.etatCivil }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nationalite</th>
+                        <td>{{ candidat.nationalite }}</td>
+                    </tr>
+                    <tr>
+                        <th>Photo</th>
+                        <td>{{ candidat.photo }}</td>
+                    </tr>
+                    <tr>
+                        <th>Province_origine</th>
+                        <td>{{ candidat.provinceOrigine }}</td>
+                    </tr>
+                    <tr>
+                        <th>Lieu_naissance</th>
+                        <td>{{ candidat.lieuNaissance }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date_naissance</th>
+                        <td>{{ candidat.dateNaissance ? candidat.dateNaissance|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Telephone</th>
+                        <td>{{ candidat.telephone }}</td>
+                    </tr>
+                    <tr>
+                        <th>Langues</th>
+                        <td>{{ candidat.langues ? candidat.langues|json_encode : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Connaissance_informatique</th>
+                        <td>{{ candidat.connaissanceInformatique ? candidat.connaissanceInformatique|json_encode : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Experiences_professionnelles</th>
+                        <td>{{ candidat.experiencesProfessionnelles ? candidat.experiencesProfessionnelles|json_encode : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Personnes_references</th>
+                        <td>{{ candidat.personnesReferences ? candidat.personnesReferences|json_encode : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Adresse</th>
+                        <td>{{ candidat.adresse }}</td>
+                    </tr>
+                    <tr>
+                        <th>Etudes_faites</th>
+                        <td>{{ candidat.etudesFaites ? candidat.etudesFaites|json_encode : '' }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

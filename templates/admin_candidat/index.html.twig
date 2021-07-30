@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0">Candidats</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom</th>
+                                <th>Postnom</th>
+                                <th>Prenom</th>
+                                <th>Sexe</th>
+                                <th>Etat_civil</th>
+                                <th>Nationalite</th>
+                                <th>Photo</th>
+                                <th>Province_origine</th>
+                                <th>Lieu_naissance</th>
+                                <th>Date_naissance</th>
+                                <th>Telephone</th>
+                                <th>Langues</th>
+                                <th>Connaissance_informatique</th>
+                                <th>Experiences_professionnelles</th>
+                                <th>Personnes_references</th>
+                                <th>Adresse</th>
+                                <th>Etudes_faites</th>
+                                <th>actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for candidat in candidats %}
+                                <tr>
+                                    <td>{{ candidat.id }}</td>
+                                    <td>{{ candidat.nom }}</td>
+                                    <td>{{ candidat.postnom }}</td>
+                                    <td>{{ candidat.prenom }}</td>
+                                    <td>{{ candidat.sexe }}</td>
+                                    <td>{{ candidat.etatCivil }}</td>
+                                    <td>{{ candidat.nationalite }}</td>
+                                    <td>{{ candidat.photo }}</td>
+                                    <td>{{ candidat.provinceOrigine }}</td>
+                                    <td>{{ candidat.lieuNaissance }}</td>
+                                    <td>{{ candidat.dateNaissance ? candidat.dateNaissance|date('Y-m-d H:i:s') : '' }}</td>
+                                    <td>{{ candidat.telephone }}</td>
+                                    <td>{{ candidat.langues ? candidat.langues|json_encode : '' }}</td>
+                                    <td>{{ candidat.connaissanceInformatique ? candidat.connaissanceInformatique|json_encode : '' }}</td>
+                                    <td>{{ candidat.experiencesProfessionnelles ? candidat.experiencesProfessionnelles|json_encode : '' }}</td>
+                                    <td>{{ candidat.personnesReferences ? candidat.personnesReferences|json_encode : '' }}</td>
+                                    <td>{{ candidat.adresse }}</td>
+                                    <td>{{ candidat.etudesFaites ? candidat.etudesFaites|json_encode : '' }}</td>
+                                    <td>
+                                        <a href="{{ path('admin_candidat_show', {'id': candidat.id}) }}">show</a>
+                                        <a href="{{ path('admin_candidat_edit', {'id': candidat.id}) }}">edit</a>
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="19">no records found</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
